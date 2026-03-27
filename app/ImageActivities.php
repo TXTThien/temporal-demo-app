@@ -15,6 +15,6 @@ interface ImageActivities
     #[ActivityMethod(name: "notifyAdmin")]
     public function notifyAdmin(string $imageId): void;
 
-    #[ActivityMethod(name: "updateStatys")]
+    #[ActivityMethod(name: "updateStatus")]
     public function updateStatus(string $imageId, string $status): void;
 }
