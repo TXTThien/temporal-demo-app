@@ -16,7 +16,7 @@ class ImageApprovalWorkflowImpl implements ImageApprovalWorkflow {
     {
         $activities = Workflow::newActivityStub(
             ImageActivities::class,
-            ActivityOptions::new()->withStartToCloseTimeout(10)->withScheduleToStartTimeout(CarbonInterval::minute(5))->withStartToCloseTimeout(CarbonInterval::minute(5))
+            ActivityOptions::new()->withStartToCloseTimeout(10)->withScheduleToStartTimeout(CarbonInterval::minute(5))
         );
         $hasChildren = yield $activities->detectChildren($imageId);
 
