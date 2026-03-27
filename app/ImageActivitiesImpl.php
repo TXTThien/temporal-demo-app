@@ -26,4 +26,10 @@ class ImageActivitiesImpl implements  ImageActivities {
     {
         echo "[Activity] UPDATE DB: Trạng thái hình {$imageId} chuyển thành: {$status}\n";
     }
+
+    #[ActivityMethod(name: "sendSlackMessage")]
+    public function sendSlackMessage(string $imageId): void
+    {
+        echo "[Activity] Gửi mail cho admin: Thông báo về ảnh {$imageId} \n";
+    }
 }

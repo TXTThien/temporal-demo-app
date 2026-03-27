@@ -17,4 +17,7 @@ interface ImageActivities
 
     #[ActivityMethod(name: "updateStatus")]
     public function updateStatus(string $imageId, string $status): void;
+
+    #[ActivityMethod(name: "sendSlackMessage")]
+    public function sendSlackMessage(string $imageId): void;
 }
